@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Header = () => {
   return (
@@ -27,16 +28,21 @@ const Header = () => {
               Home
             </li>
           </Link>
-          <Link href="/">
+          <Link href="/about">
             <li className="hidden md:inline text-slate-700 hover:underline">
               About
             </li>
           </Link>
-          <Link href="/">
-            <li className="hidden md:inline text-slate-700 hover:underline">
-              Sign In
-            </li>
-          </Link>
+          <SignedOut>
+            <Link href="/sign-in">
+              <li className="hidden md:inline text-slate-700 hover:underline">
+                Sign In
+              </li>
+            </Link>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </ul>
       </div>
     </header>

@@ -5,7 +5,7 @@ import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 const Header = () => {
   return (
     <header className="bg-slate-200 shadow-md">
-      <div className="flex justify-between items-center maax-w-6xl mx-auto p-3">
+      <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
         <Link href="/">
           <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
             <span className="text-slate-500">Vikraman</span>
